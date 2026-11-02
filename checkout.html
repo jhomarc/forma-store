@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | FORMA STORE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <header class="site-header">
+    <nav class="container nav-wrapper" aria-label="Main navigation">
+      <a href="index.html" class="logo">FORMA<span>.</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="cart-link" aria-label="Shopping cart">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>
+          </svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Checkout</h1>
+        <p>Complete your order details below.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <!-- Shown when the cart is empty -->
+      <div class="notice" id="checkout-empty" hidden>
+        <p>Your cart is empty, so there is nothing to check out.</p>
+        <a href="shop.html" class="btn btn-primary">Go to Shop</a>
+      </div>
+
+      <div class="checkout-layout">
+        <div>
+          <div class="demo-banner" role="note">
+            <strong>Demo only.</strong> This checkout is a classroom demonstration. No real payment is processed and no payment details are collected.
+          </div>
+
+          <form class="form-card" id="checkout-form" novalidate>
+            <h2>Customer Details</h2>
+
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+              <span class="field-error" data-error-for="name"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <span class="field-error" data-error-for="email"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                <span class="field-error" data-error-for="phone"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Delivery address</label>
+              <input type="text" id="address" name="address" autocomplete="street-address" required>
+              <span class="field-error" data-error-for="address"></span>
+            </div>
+
+            <fieldset class="form-group" style="border:none;padding:0;margin:0 0 1.1rem;">
+              <legend style="font-weight:600;margin-bottom:0.5rem;">Payment method</legend>
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="Cash on Delivery" checked>
+                  Cash on Delivery
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="GCash">
+                  GCash (demo only)
+                </label>
+              </div>
+              <p class="gcash-note" id="gcash-note" hidden>GCash is a demo option. No real payment will be made and no GCash details are needed.</p>
+              <span class="field-error" data-error-for="payment"></span>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary btn-large btn-full">Place Demo Order</button>
+          </form>
+
+          <!-- Shown after a successful demo order -->
+          <div class="confirmation" id="order-confirmation" hidden>
+            <h2>Thank you for your order!</h2>
+            <p>This is a demo confirmation. No real order or payment was made.</p>
+            <p>Your demo order number is:</p>
+            <p class="order-number" id="order-number"></p>
+            <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+          </div>
+        </div>
+
+        <!-- Order summary -->
+        <aside class="summary-card" aria-label="Order summary">
+          <h2>Order Summary</h2>
+          <ul class="order-summary-list" id="checkout-summary"></ul>
+          <div class="summary-total">
+            <span>Total</span>
+            <span id="checkout-total">₱0.00</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>FORMA STORE</h3>
+        <p>Everyday essentials, thoughtfully made for everyday life.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>hello@formastore.ph</p>
+        <p>+63 912 345 6789</p>
+      </div>
+      <div>
+        <h3>Visit Us</h3>
+        <p>123 Mabini Street</p>
+        <p>Makati City, Metro Manila, Philippines</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      &copy; <span id="current-year"></span> FORMA STORE. Demo project for school use only.
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

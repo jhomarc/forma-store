@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMA STORE | Everyday Essentials</title>
+  <meta name="description" content="FORMA STORE sells clothing, accessories, gadgets, and lifestyle items.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <header class="site-header">
+    <nav class="container nav-wrapper" aria-label="Main navigation">
+      <a href="index.html" class="logo">FORMA<span>.</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="cart-link" aria-label="Shopping cart">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>
+          </svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="hero-eyebrow">New Season Collection</p>
+          <h1>Everyday Essentials, Thoughtfully Made.</h1>
+          <p>Shop clothing, accessories, gadgets, and lifestyle pieces designed for real life. Simple, reliable, and made to last.</p>
+          <a href="shop.html" class="btn btn-primary btn-large">Shop Now</a>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=900&q=80" alt="Model wearing a relaxed FORMA STORE outfit">
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured products -->
+    <section class="section container" aria-labelledby="featured-heading">
+      <h2 class="section-title" id="featured-heading">Featured Products</h2>
+      <p class="section-subtitle">Our most-loved picks this season.</p>
+      <div class="product-grid" id="featured-products"></div>
+    </section>
+
+    <!-- Category cards -->
+    <section class="section container" aria-labelledby="categories-heading">
+      <h2 class="section-title" id="categories-heading">Shop by Category</h2>
+      <p class="section-subtitle">Find what you need, fast.</p>
+      <div class="category-grid">
+        <a href="shop.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&q=80" alt="">
+          <span>Clothing</span>
+        </a>
+        <a href="shop.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1606503153255-59d8b9e9e5a1?w=600&q=80" alt="">
+          <span>Accessories</span>
+        </a>
+        <a href="shop.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&q=80" alt="">
+          <span>Gadgets</span>
+        </a>
+        <a href="shop.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80" alt="">
+          <span>Lifestyle</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Promotional banner -->
+    <section class="promo-banner" aria-labelledby="promo-heading">
+      <div class="container">
+        <h2 id="promo-heading">Free Delivery on Orders Over ₱1,500</h2>
+        <p>Demo offer for this school project. Stock up on your favorites today.</p>
+        <a href="shop.html" class="btn btn-outline">Browse Deals</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>FORMA STORE</h3>
+        <p>Everyday essentials, thoughtfully made for everyday life.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>hello@formastore.ph</p>
+        <p>+63 912 345 6789</p>
+      </div>
+      <div>
+        <h3>Visit Us</h3>
+        <p>123 Mabini Street</p>
+        <p>Makati City, Metro Manila, Philippines</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      &copy; <span id="current-year"></span> FORMA STORE. Demo project for school use only.
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
